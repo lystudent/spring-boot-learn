@@ -1,0 +1,1 @@
+console.info("resources")   // 静态资源文件的加载顺序 resources --> static --> public
