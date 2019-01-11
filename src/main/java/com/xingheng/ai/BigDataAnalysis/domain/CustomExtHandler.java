@@ -36,13 +36,27 @@ public class CustomExtHandler {
 
 
 
-	/**sdddasddddd
+	/**
 	 * 处理自定义异常
 	 * @param e
 	 * @return
 	 */
 	@ExceptionHandler(value = MyExcption.class)
 	Object MyhandleException(Exception e){
+		ModelAndView modelAndView = new ModelAndView();  // 用来做页面跳转
+		modelAndView.setViewName("error.html");
+		modelAndView.addObject("msg",e.getMessage());
+		return modelAndView;
+	}
+
+
+	/**sdddasddddd
+	 * 处理自定义异常
+	 * @param e
+	 * @return
+	 */
+	@ExceptionHandler(value = MyExcption.class)
+	Object MyhandleException1(Exception e){
 		ModelAndView modelAndView = new ModelAndView();  // 用来做页面跳转
 		modelAndView.setViewName("error.html");
 		modelAndView.addObject("msg",e.getMessage());
