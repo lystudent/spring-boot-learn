@@ -22,7 +22,7 @@ import java.util.Map;
 public class CustomExtHandler {
 
 	private static final Logger LOG = LoggerFactory.getLogger(CustomExtHandler.class);
-	// 捕获所有异常，处理所有不可知的异常
+	 // 捕获所有异常，处理所有不可知的异常
 	@ExceptionHandler(value = Exception.class)
 //	@RequestBody
 	Object handleException(Exception e, HttpServletRequest request){
@@ -42,27 +42,19 @@ public class CustomExtHandler {
 	 * @return
 	 */
 	@ExceptionHandler(value = MyExcption.class)
-	Object MyhandleException(Exception e){
-		ModelAndView modelAndView = new ModelAndView();  // 用来做页面跳转
-		modelAndView.setViewName("error.html");
-		modelAndView.addObject("msg",e.getMessage());
-		return modelAndView;
+	Object MyhandleException(MyExcption e,HttpServletRequest request){
+
+//		ModelAndView modelAndView = new ModelAndView();  // 用来做页面跳转
+//		modelAndView.setViewName("./error/error.html");
+//		modelAndView.addObject("msg",e.getMessage());
+//		return modelAndView;
+
+		Map<String,Object> map = new HashMap<>();
+		map.put("code",e.getCode());
+		map.put("mgs",e.getMgs());
+		map.put("url",request.getRequestURI());
+		return map;
 	}
-
-
-	/**sdddasddddd
-	 * 处理自定义异常
-	 * @param e
-	 * @return
-	 */
-	@ExceptionHandler(value = MyExcption.class)
-	Object MyhandleException1(Exception e){
-		ModelAndView modelAndView = new ModelAndView();  // 用来做页面跳转
-		modelAndView.setViewName("error.html");
-		modelAndView.addObject("msg",e.getMessage());
-		return modelAndView;
-	}
-
 
 
 
