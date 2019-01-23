@@ -3,6 +3,7 @@ package com.xingheng.ai.BigDataAnalysis;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -16,7 +17,7 @@ import java.util.Map;
  */
 //@SpringBootApplication = @SpringBootConfiguration+@EnableAutoConfiguration+@ComponentScan
 @SpringBootApplication
-//@EnableSwagger2
+@ServletComponentScan
 public class BigDataAnalysisApplication {
 
 	public static void main(String[] args) {

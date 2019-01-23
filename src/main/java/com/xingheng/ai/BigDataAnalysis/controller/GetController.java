@@ -3,6 +3,8 @@ package com.xingheng.ai.BigDataAnalysis.controller;
 import com.xingheng.ai.BigDataAnalysis.domain.ServerSettings;
 import com.xingheng.ai.BigDataAnalysis.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.core.Ordered;
 import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.*;
 
@@ -94,6 +96,7 @@ public class GetController {
 	public Object test_requst(HttpServletRequest request) {
 		params.clear();
 		String id = request.getParameter("id");
+		System.out.println("Controller处理中");
 		params.put("id", id);
 		return params;
 	}
@@ -102,10 +105,26 @@ public class GetController {
 	@Autowired
 	private ServerSettings serverSettings;
 
-	@GetMapping(value = "/v1/test_properties")
+	@GetMapping(value = "/api/v1/test_properties")
 	public Object test_properties(HttpServletRequest request) {
+
 		return serverSettings;
 	}
 
+
+	@GetMapping(value = "/api/v1/account")
+	public Object account() {  //默认值类型不能是int，参数为int类型，不能赋值为null，故需要修改为Integer
+		params.clear();
+		params.put("money","100000000000");
+		params.put("name", "lym");
+		return params;
+	}
+
+	@GetMapping(value = "/api2/v1/account1")
+	public Object account1(){
+		System.out.println("crotroller --->account1");
+		params.put("money","1000");
+		return params;
+	}
 
 }

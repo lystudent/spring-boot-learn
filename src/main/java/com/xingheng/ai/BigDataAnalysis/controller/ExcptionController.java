@@ -24,10 +24,10 @@ public class ExcptionController {
 		return new User(11, "lym", "123456", "13888888888", new Date());
 	}
 
-	//	@ApiOperation(value = "自定义异常测试", httpMethod = "POST")
+	@ApiOperation(value = "自定义异常测试", httpMethod = "POST")
 	@RequestMapping("/api/va/test_myext")
 	@ResponseBody
 	public Object myexc() {
-		throw new MyExcption("400", "myexc 异常");
+		throw new MyExcption("499", "myexc 异常");
 	}
 }
