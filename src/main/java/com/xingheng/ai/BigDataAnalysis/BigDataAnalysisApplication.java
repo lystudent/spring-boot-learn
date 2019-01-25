@@ -1,5 +1,6 @@
 package com.xingheng.ai.BigDataAnalysis;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
@@ -18,6 +19,7 @@ import java.util.Map;
 //@SpringBootApplication = @SpringBootConfiguration+@EnableAutoConfiguration+@ComponentScan
 @SpringBootApplication
 @ServletComponentScan
+@MapperScan("com.xingheng.ai.BigDataAnalysis.mapper")  // 扫描对应的mapper文件
 public class BigDataAnalysisApplication {
 
 	public static void main(String[] args) {

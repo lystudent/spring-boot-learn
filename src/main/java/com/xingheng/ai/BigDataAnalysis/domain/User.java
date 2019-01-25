@@ -15,9 +15,19 @@ import java.util.Date;
 public class User {
 
 
+	private Integer id;
+
 	private Integer age;
 
 	private String name;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	@JsonIgnore   // 序列化忽略密码 ,序列化以后的json不包括pwd
 	private String pwd;
@@ -74,5 +84,8 @@ public class User {
 		this.pwd = pwd;
 		this.phone = phone;
 		this.createTime = createTime;
+	}
+	public User() {
+
 	}
 }

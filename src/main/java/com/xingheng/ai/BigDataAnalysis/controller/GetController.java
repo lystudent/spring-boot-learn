@@ -2,6 +2,7 @@ package com.xingheng.ai.BigDataAnalysis.controller;
 
 import com.xingheng.ai.BigDataAnalysis.domain.ServerSettings;
 import com.xingheng.ai.BigDataAnalysis.domain.User;
+import com.xingheng.ai.BigDataAnalysis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.core.Ordered;
@@ -23,6 +24,9 @@ import java.util.Map;
 @RestController
 public class GetController {
 	private Map<String, Object> params = new HashMap<>();
+
+	@Autowired
+	private UserService userService;
 
 
 //	@RequestMapping(path = "/{city_id}/{user_id}",method = RequestMethod.GET)
@@ -125,6 +129,12 @@ public class GetController {
 		System.out.println("crotroller --->account1");
 		params.put("money","1000");
 		return params;
+	}
+
+	@PutMapping(value = "/api/insertuser")
+	public Integer insertuser(){
+		userService.add(new User());
+		return 1;
 	}
 
 }

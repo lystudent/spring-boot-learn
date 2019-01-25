@@ -64,12 +64,12 @@ public class FileController {
 		try {
 			file.transferTo(dest);  // transferTo 方法用于文件保存(效率和操作比原来的FileOutputStream 方便高效)
 
-			return new JsonData(0, fileName);
+			return new JsonData(0, fileName,"");
 		} catch (IllegalStateException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return new JsonData(-1, "fail to save ");
+		return new JsonData(-1, "fail to save ","");
 	}
 }
