@@ -1,8 +1,10 @@
 package com.xingheng.ai.BigDataAnalysis.controller;
 
+import com.xingheng.ai.BigDataAnalysis.domain.JsonData;
 import com.xingheng.ai.BigDataAnalysis.domain.ServerSettings;
 import com.xingheng.ai.BigDataAnalysis.domain.User;
 import com.xingheng.ai.BigDataAnalysis.service.UserService;
+import com.xingheng.ai.BigDataAnalysis.task.AsyncTask;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.core.Ordered;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Future;
 
 /**
  * get请求
@@ -28,6 +31,8 @@ public class GetController {
 	@Autowired
 	private UserService userService;
 
+	@Autowired
+	private AsyncTask asyncTask;
 
 //	@RequestMapping(path = "/{city_id}/{user_id}",method = RequestMethod.GET)
 //	public Object findUser(@PathVariable("city_id") String cityId, @PathVariable("user_id") String userId){
@@ -135,6 +140,26 @@ public class GetController {
 	public Integer insertuser(){
 		userService.add(new User());
 		return 1;
+	}
+
+	@GetMapping(value = "/api/v1/async")
+	public JsonData exeTask() throws  InterruptedException{
+		long begin = System.currentTimeMillis();
+//		asyncTask.task1();
+//		asyncTask.task2();
+//		asyncTask.task3();
+		Future<String> task4 = asyncTask.task4();
+		Future<String> task5 = asyncTask.task5();
+		Future<String> task6 = asyncTask.task6();
+		for(;;){
+			if (task4.isDone() && task5.isDone() && task6.isDone()){
+				break;
+			}
+		}
+		long end = System.currentTimeMillis();
+		long total = end-begin;
+		System.out.println("执行总耗时="+total);
+		return JsonData.buildSuccess();
 	}
 
 }

@@ -77,6 +77,13 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+
         <!-- MySQL的JDBC驱动包	-->
         <dependency>
             <groupId>mysql</groupId>
