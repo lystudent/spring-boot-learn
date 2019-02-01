@@ -115,6 +115,14 @@
             <version>${swagger.version}</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-elasticsearch -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+            <version>2.1.1.RELEASE</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
