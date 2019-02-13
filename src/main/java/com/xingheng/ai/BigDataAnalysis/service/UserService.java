@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
  * @Date:2019/1/23 18 27
  * @Description:
  */
-@Service
+
 public interface UserService {
 
 	public int add(User user);
