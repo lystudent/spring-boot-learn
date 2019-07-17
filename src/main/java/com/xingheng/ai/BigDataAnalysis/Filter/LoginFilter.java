@@ -48,7 +48,7 @@ public class LoginFilter implements Filter {
 		if ("lym".equals(username)) {
 			filterChain.doFilter(servletRequest, servletResponse);
 		} else {
-			response.sendRedirect("/index.html"); // 过滤跳转页面
+			response.sendRedirect("/index1.html"); // 过滤跳转页面
 			return;
 		}
 

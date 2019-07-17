@@ -6,6 +6,7 @@ package com.xingheng.ai.BigDataAnalysis.domain;
  * @Date:2019/1/11 16 45
  * @Description:
  */
+
 public class MyExcption extends RuntimeException {
 
 	public MyExcption(String code, String mgs) {

@@ -1,0 +1,121 @@
+2019-05-23 10:49:08.125 ERROR[http-nio-8089-exec-1]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/va/test_ext,msg / by zero
+2019-05-23 10:50:16.512 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{kJ-nIZ5gR8mshJXDH_Fn7g}{localhost}{127.0.0.1:9300}]
+2019-05-23 10:50:59.519 ERROR[http-nio-8089-exec-1]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/v1/user/add,msg / by zero
+2019-05-23 10:51:49.897 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{hwwdHBuKS1Co8uUBUnP8Pw}{localhost}{127.0.0.1:9300}]
+2019-05-23 12:16:18.981 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{1ox55qA0SzKLckXivlegNQ}{localhost}{127.0.0.1:9300}]
+2019-05-23 12:16:23.298 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{TpN7njFLRMOpV-Cs3zL_Qg}{localhost}{127.0.0.1:9300}]
+2019-05-23 12:16:25.642 ERROR[restartedMain]org.apache.catalina.util.LifecycleBase.log:175 -Failed to start component [Connector[HTTP/1.1-8089]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1001)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.xingheng.ai.BigDataAnalysis.BigDataAnalysisApplication.main(BigDataAnalysisApplication.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1067)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1149)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:561)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:998)
+	... 19 common frames omitted
+2019-05-23 12:16:25.673 ERROR[restartedMain]o.s.boot.diagnostics.LoggingFailureAnalysisReporter.report:42 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8089 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8089, or configure this application to listen on another port.
+
+2019-05-23 12:16:51.122 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{mzfwgwJ7Qjuq7oY7GGzQ7g}{localhost}{127.0.0.1:9300}]
+2019-05-23 12:17:33.230 ERROR[http-nio-8089-exec-1]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/v1/user/del_by_id,msg 无token,请重新登录
+2019-05-23 12:18:03.599 ERROR[http-nio-8089-exec-2]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/authentication,msg 无token,请重新登录
+2019-05-23 12:22:08.380 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{_ZBjHNlpS36lsdUQIQjapQ}{localhost}{127.0.0.1:9300}]
+2019-05-23 12:22:16.705 ERROR[http-nio-8089-exec-1]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/authentication,msg 无token,请重新登录
+2019-05-23 12:23:40.016 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{Pd8_H1-1QMKG09NAb9Q0_Q}{localhost}{127.0.0.1:9300}]
+2019-05-23 12:25:30.061 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{sBoMmgbRTwGc6d4viZrTsg}{localhost}{127.0.0.1:9300}]
+2019-05-23 12:26:00.615 ERROR[http-nio-8089-exec-3]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url //swagger-resources/configuration/security,msg 无token,请重新登录
+2019-05-23 12:26:04.765 ERROR[http-nio-8089-exec-5]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url //swagger-resources/configuration/security,msg 无token,请重新登录
+2019-05-23 12:26:15.765 ERROR[http-nio-8089-exec-6]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/v1/user/findAll,msg 无token,请重新登录
+2019-05-23 12:27:44.539 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{LW053Q2mStSpSbe6JvHfPA}{localhost}{127.0.0.1:9300}]
+2019-05-23 12:28:19.359 ERROR[http-nio-8089-exec-3]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 12:28:19.412 ERROR[http-nio-8089-exec-4]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url //swagger-resources/configuration/ui,msg 无token,请重新登录
+2019-05-23 12:28:22.511 ERROR[http-nio-8089-exec-7]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 12:28:22.543 ERROR[http-nio-8089-exec-8]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url //swagger-resources/configuration/ui,msg 无token,请重新登录
+2019-05-23 12:28:23.366 ERROR[http-nio-8089-exec-1]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 12:28:23.397 ERROR[http-nio-8089-exec-2]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url //swagger-resources/configuration/ui,msg 无token,请重新登录
+2019-05-23 12:28:36.821 ERROR[http-nio-8089-exec-4]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 12:28:36.858 ERROR[http-nio-8089-exec-5]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url //swagger-resources/configuration/ui,msg 无token,请重新登录
+2019-05-23 12:29:19.881 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{LLaUj3KJRLyV0vQ4SG-XNQ}{localhost}{127.0.0.1:9300}]
+2019-05-23 12:29:24.924 ERROR[http-nio-8089-exec-2]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 12:29:24.992 ERROR[http-nio-8089-exec-3]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url //swagger-resources/configuration/ui,msg 无token,请重新登录
+2019-05-23 12:29:25.028 ERROR[http-nio-8089-exec-6]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 12:29:25.065 ERROR[http-nio-8089-exec-7]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url //swagger-resources/configuration/ui,msg 无token,请重新登录
+2019-05-23 14:28:54.678 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{IQwNPpcuTDeGio_s5oTGPg}{localhost}{127.0.0.1:9300}]
+2019-05-23 14:28:59.637 ERROR[http-nio-8089-exec-2]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 14:28:59.727 ERROR[http-nio-8089-exec-3]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url //swagger-resources/configuration/ui,msg 无token,请重新登录
+2019-05-23 14:29:00.359 ERROR[http-nio-8089-exec-6]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 14:29:00.392 ERROR[http-nio-8089-exec-7]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url //swagger-resources/configuration/ui,msg 无token,请重新登录
+2019-05-23 14:29:02.577 ERROR[http-nio-8089-exec-10]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 14:29:02.611 ERROR[http-nio-8089-exec-1]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url //swagger-resources/configuration/ui,msg 无token,请重新登录
+2019-05-23 14:29:13.071 ERROR[http-nio-8089-exec-4]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 14:29:13.183 ERROR[http-nio-8089-exec-7]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /swagger-resources/configuration/ui,msg 无token,请重新登录
+2019-05-23 14:29:53.510 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{4__1RuC4T5mTzPUEwxj2JQ}{localhost}{127.0.0.1:9300}]
+2019-05-23 14:30:02.544 ERROR[http-nio-8089-exec-2]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 14:30:02.634 ERROR[http-nio-8089-exec-3]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /swagger-resources/configuration/ui,msg 无token,请重新登录
+2019-05-23 14:30:03.848 ERROR[http-nio-8089-exec-6]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 14:30:03.883 ERROR[http-nio-8089-exec-7]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /swagger-resources/configuration/ui,msg 无token,请重新登录
+2019-05-23 14:30:28.842 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{tS7V9GkLQNirxMje-20oBg}{localhost}{127.0.0.1:9300}]
+2019-05-23 14:30:35.828 ERROR[http-nio-8089-exec-2]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 14:30:35.942 ERROR[http-nio-8089-exec-5]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /swagger-resources,msg 无token,请重新登录
+2019-05-23 14:30:46.888 ERROR[http-nio-8089-exec-6]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 14:30:47.035 ERROR[http-nio-8089-exec-7]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /swagger-resources,msg 无token,请重新登录
+2019-05-23 14:30:48.289 ERROR[http-nio-8089-exec-9]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 14:30:48.335 ERROR[http-nio-8089-exec-2]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /swagger-resources,msg 无token,请重新登录
+2019-05-23 14:30:50.254 ERROR[http-nio-8089-exec-3]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 14:30:50.297 ERROR[http-nio-8089-exec-7]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /swagger-resources,msg 无token,请重新登录
+2019-05-23 14:30:50.632 ERROR[http-nio-8089-exec-9]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /error,msg 无token,请重新登录
+2019-05-23 14:30:50.666 ERROR[http-nio-8089-exec-2]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /swagger-resources,msg 无token,请重新登录
+2019-05-23 14:35:10.557 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{CPFAUqxgTv-zP-NyD_l-XA}{localhost}{127.0.0.1:9300}]
+2019-05-23 16:37:35.652 ERROR[http-nio-8089-exec-3]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/va/test_ext,msg / by zero
+2019-05-23 16:39:45.284 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{3UaO_UybTWaT6oo2xFOv1g}{localhost}{127.0.0.1:9300}]
+2019-05-23 16:41:44.847 ERROR[http-nio-8089-exec-6]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/v1/user/add,msg JSON parse error: Cannot deserialize value of type `java.util.Date` from String "2019-05-23T08:40:09.149Z": expected format "yyyy-MM-dd hh:mm:ss"; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2019-05-23T08:40:09.149Z": expected format "yyyy-MM-dd hh:mm:ss"
+ at [Source: (PushbackInputStream); line: 4, column: 17] (through reference chain: com.xingheng.ai.BigDataAnalysis.domain.User["createTime"])
+2019-05-23 16:45:40.941 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{6pXGEKNZS5KxVLcKQYxxJg}{localhost}{127.0.0.1:9300}]
+2019-05-23 16:46:18.672 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{kCrjazVrQuqF64Fdg2va3g}{localhost}{127.0.0.1:9300}]
+2019-05-23 17:27:54.874 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{Zwy7pGytTB-EIP4xNDpbew}{localhost}{127.0.0.1:9300}]
+2019-05-23 17:28:12.554 ERROR[http-nio-8089-exec-1]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/otherhttp/v1/login,msg 无token,请重新登录
+2019-05-23 17:32:27.097 ERROR[http-nio-8089-exec-3]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/otherhttp/v1/login,msg 无token,请重新登录
+2019-05-23 17:33:17.225 ERROR[http-nio-8089-exec-5]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/v1/user/findAll,msg 无token,请重新登录
+2019-05-23 17:33:20.830 ERROR[http-nio-8089-exec-6]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/v1/user/add,msg 无token,请重新登录
+2019-05-23 17:33:42.480 ERROR[http-nio-8089-exec-7]com.xingheng.ai.BigDataAnalysis.domain.CustomExtHandler.handleException:29 -url /api/authentication,msg JSON parse error: Cannot deserialize value of type `java.util.Date` from String "2019-05-23T08:42:51.171Z": expected format "yyyy-MM-dd hh:mm:ss"; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2019-05-23T08:42:51.171Z": expected format "yyyy-MM-dd hh:mm:ss"
+ at [Source: (PushbackInputStream); line: 4, column: 17] (through reference chain: com.xingheng.ai.BigDataAnalysis.domain.User["createTime"])
+2019-05-23 17:40:47.414 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{iCSEtHZ9SmSezv0guofitA}{localhost}{127.0.0.1:9300}]
+2019-05-23 17:42:07.072 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{oKgf726XT5OYiH4ma0YsdA}{localhost}{127.0.0.1:9300}]
+2019-05-23 17:43:21.736 ERROR[restartedMain]o.s.d.e.r.support.AbstractElasticsearchRepository.<init>:91 -failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{RH0W1N7kQi6pUFDgXlRQ4Q}{localhost}{127.0.0.1:9300}]

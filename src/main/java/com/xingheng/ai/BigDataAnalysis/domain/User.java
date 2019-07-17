@@ -29,7 +29,7 @@ public class User {
 		this.id = id;
 	}
 
-	@JsonIgnore   // 序列化忽略密码 ,序列化以后的json不包括pwd
+//	@JsonIgnore   // 序列化忽略密码 ,序列化以后的json不包括
 	private String pwd;
 
 	@JsonInclude(JsonInclude.Include.NON_NULL) //空值不返回

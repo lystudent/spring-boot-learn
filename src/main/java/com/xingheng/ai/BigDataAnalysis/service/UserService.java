@@ -14,4 +14,10 @@ public interface UserService {
 	public int add(User user);
 
 	public int AddCount();
+
+	public User findByName(String name);
+
+	public  User findByID(Long id);
+
+	public boolean comparePassword(User user,User userInDatabase);
 }

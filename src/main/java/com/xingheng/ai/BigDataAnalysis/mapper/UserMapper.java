@@ -3,6 +3,7 @@ package com.xingheng.ai.BigDataAnalysis.mapper;
 import com.xingheng.ai.BigDataAnalysis.domain.User;
 import org.apache.ibatis.annotations.*;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * @Date:2019/1/23 18 04
  * @Description:
  */
-@Mapper
+@Service
 public interface UserMapper {
 
 
@@ -23,7 +24,7 @@ public interface UserMapper {
 	 * @param user
 	 * @return
 	 */
-	@Insert("INSERT INTO user(name,phone,create_time,age) VALUES(#{name}, #{phone}, #{createTime},#{age})")
+	@Insert("INSERT INTO user(name,phone,create_time,age,pwd) VALUES(#{name}, #{phone}, #{createTime},#{age},#{pwd})")
 	@Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")   //keyProperty java对象的属性；keyColumn表示数据库的字段
 	int insert(User user);
 
@@ -34,7 +35,7 @@ public interface UserMapper {
 	 */
     @Select("SELECT * FROM user")
     @Results({
-        @Result(column = "create_time",property = "createTime")  //javaType = java.util.Date.class
+        @Result(column = "create_time",property = "createTime")  //javaType = java.Httputil.Date.class
     })
 	List<User> getAll();
 
@@ -50,7 +51,14 @@ public interface UserMapper {
     })
     User findById(Long id);
 
-	/**
+
+    @Select("SELECT * from user WHERE name = #{name}")
+    @Results({
+            @Result(column = "create_time",property = "createTime")
+    })
+    User findByName(String name);
+
+    /**
 	 * 根据id修改姓名
 	 * @param user
 	 */

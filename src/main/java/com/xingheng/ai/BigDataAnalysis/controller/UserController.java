@@ -1,14 +1,15 @@
 package com.xingheng.ai.BigDataAnalysis.controller;
 
+import com.sun.net.httpserver.HttpsServer;
+import com.xingheng.ai.BigDataAnalysis.annotation.LoginRequired;
 import com.xingheng.ai.BigDataAnalysis.domain.JsonData;
 import com.xingheng.ai.BigDataAnalysis.domain.User;
 import com.xingheng.ai.BigDataAnalysis.mapper.UserMapper;
 import com.xingheng.ai.BigDataAnalysis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
 /**
@@ -17,7 +18,9 @@ import java.util.Date;
  * @Description:
  */
 @RestController
+@LoginRequired
 @RequestMapping("/api/v1/user")
+
 public class UserController {
 
 	@Autowired
@@ -30,17 +33,15 @@ public class UserController {
 	 * 功能描述: user 保存接口
 	 * @return
 	 */
-	@GetMapping("add")
-	public Object add(){
-
-		User user = new User();
-		user.setAge(11);
-		user.setCreateTime(new Date());
-		user.setName("xdclass");
-		user.setPhone("10010000");
-		int id = userService.add(user);
-
-		return JsonData.buildSuccess(id);
+	@PostMapping("add")
+	public Object add(@RequestBody User user){
+		if (userService.findByName(user.getName()) !=null){
+//            response.setStatus(401);
+//            return JsonData.buildError("用户名已经被使用！",401);
+		   return JsonData.buildError("用户名已经被使用");
+        }
+        userService.add(user);
+		return userService.findByName(user.getName());
 	}
 
 
@@ -75,7 +76,6 @@ public class UserController {
 		userMapper.update(user);
 	    return JsonData.buildSuccess();
 	}
-
 
 
 

@@ -1,5 +1,6 @@
 package com.xingheng.ai.BigDataAnalysis.controller;
 
+import com.xingheng.ai.BigDataAnalysis.annotation.LoginRequired;
 import com.xingheng.ai.BigDataAnalysis.repository.ArticleRepository;
 import com.xingheng.ai.BigDataAnalysis.domain.Article;
 import com.xingheng.ai.BigDataAnalysis.domain.JsonData;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date 2019/2/1 11:46 AM
  */
 @RestController
+@LoginRequired
 @RequestMapping("/api/v1/article")
 public class ArticleController {
 

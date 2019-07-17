@@ -1,10 +1,8 @@
 package com.xingheng.ai.BigDataAnalysis.controller;
 
+import com.xingheng.ai.BigDataAnalysis.annotation.LoginRequired;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,6 +14,8 @@ import java.util.Map;
  */
 
 @RestController
+@LoginRequired
+@RequestMapping("/api/otherhttp")
 public class OtherHttpController {
 
 	private Map<String,Object> params = new HashMap<>();

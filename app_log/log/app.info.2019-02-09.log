@@ -1,2 +1,0 @@
-2019-02-09 11:05:26.441 INFO [Thread-21]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:208 -Shutting down ExecutorService 'taskScheduler'
-2019-02-09 11:05:26.450 INFO [Thread-21]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:208 -Shutting down ExecutorService 'applicationTaskExecutor'
