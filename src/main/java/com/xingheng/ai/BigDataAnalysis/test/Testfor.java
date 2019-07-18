@@ -1,5 +1,6 @@
 package com.xingheng.ai.BigDataAnalysis.test;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.el.stream.Stream;
 
 import java.lang.reflect.Array;
@@ -54,17 +55,17 @@ public class Testfor {
 
         long startTime = System.nanoTime();
         String s = "liu yan ming liu shan bing";
-        System.out.println(swapWords(s));
+//        System.out.println(swapWords1(s));
         long endTime = System.nanoTime();
         System.out.println(endTime-startTime);
     }
 
 
-    public  static void swap( char [] arr,int begin,int end){
+    public  static void swap( ArrayList<String>  arr,int begin,int end){
         while (begin<end){
-            char temp = arr[begin];
-            arr[begin] = arr[end];
-            arr[end] = temp;
+            String temp = arr.get(begin);
+            arr.set(begin,arr.get(end)) ;
+            arr.set(end,temp);
             begin++;
             end--;
         }
@@ -72,29 +73,56 @@ public class Testfor {
 
     }
 
-    public static String swapWords(String str){
-        char [] arr = str.toCharArray();
-        swap(arr,0,arr.length-1);
-        int begin = 0;
-        for (int i =1;i<arr.length;i++){
-            if(arr[i] == ' '){
-                swap(arr,begin,i-1);
-                begin = i+1;
-            }
-        }
-        swap(arr,begin,arr.length-1);
-        return new String(arr);
-    }
 
-//    public static StringBuffer swapWords1(String str){
-//        String  []  arr = str.split(" ");
+    /**
+     * 先反转字符串，再根据单词反转
+     */
+//    public static String swapWords(String str){
+//        char [] arr = str.toCharArray();
 //        swap(arr,0,arr.length-1);
-//
-//        StringBuffer  stringBuffer = new StringBuffer();
-//        for (int i =0;i<arr.length;i++){
-//            stringBuffer.append(arr[i]+" ");
+//        int begin = 0;
+//        for (int i =1;i<arr.length;i++){
+//            if(arr[i] == ' '){
+//                swap(arr,begin,i-1);
+//                begin = i+1;
+//            }
 //        }
-//        return stringBuffer;
+//        swap(arr,begin,arr.length-1);
+//        return new String(arr);
+//    }
+
+    /**
+     * 先将字符串分割,再反转
+     */
+//
+//    public static StringBuilder swapWords1(String str){
+//        char [] arr1 = str.toCharArray();
+//
+//        ArrayList<String>   arr = new ArrayList<String>();
+//        String a = "";
+//        for(int i=0;i<arr1.length;i++){
+//            a+=arr1[i];
+//            if (arr1[i]==' '){
+//                arr.add(a);
+//                a="";
+//            }
+//        }
+//        arr.add(a);
+//
+//        long startTime = System.nanoTime();
+//        swap(arr,0,arr.size()-1);
+//
+//        StringBuilder  stringBuffer = new StringBuilder();
+////        for (int i =0;i<arr.size();i++){
+////            stringBuffer.append(arr.get(i)+" ");
+////        }
+//         for(String i :arr){
+//             stringBuffer.append(i+" ");
+//         }
+////        String s = StringUtils.join(arr," ");
+//        long endTime = System.nanoTime();
+//        System.out.println(endTime-startTime);
+//        return stringBuffer ;
 //    }
 
 
