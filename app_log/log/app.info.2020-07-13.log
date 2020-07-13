@@ -1,0 +1,70 @@
+2020-07-13 10:43:07.157 INFO [restartedMain]c.xingheng.ai.BigDataAnalysis.BigDataAnalysisApplication.logStarting:50 -Starting BigDataAnalysisApplication on liuyanmingdeMacBook-Pro.local with PID 99014 (/Users/liuyanming/git_pro/big-data-analysis/target/classes started by liuyanming in /Users/liuyanming/git_pro/big-data-analysis)
+2020-07-13 10:43:07.168 INFO [restartedMain]c.xingheng.ai.BigDataAnalysis.BigDataAnalysisApplication.logStartupProfileInfo:679 -The following profiles are active: dev
+2020-07-13 10:43:07.299 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:227 -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-13 10:43:07.300 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:227 -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-13 10:43:08.679 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:244 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-13 10:43:08.682 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-07-13 10:43:08.874 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 -Finished Spring Data repository scanning in 184ms. Found 1 repository interfaces.
+2020-07-13 10:43:08.890 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:244 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-13 10:43:08.892 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-07-13 10:43:08.917 INFO [restartedMain]o.s.d.r.config.RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate:363 -Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.xingheng.ai.BigDataAnalysis.repository.ArticleRepository.
+2020-07-13 10:43:08.917 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 -Finished Spring Data repository scanning in 8ms. Found 0 repository interfaces.
+2020-07-13 10:43:09.588 INFO [restartedMain]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4187a790] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-13 10:43:10.171 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8089 (http)
+2020-07-13 10:43:10.191 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8089"]
+2020-07-13 10:43:10.204 INFO [restartedMain]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-07-13 10:43:10.204 INFO [restartedMain]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet Engine: Apache Tomcat/9.0.13
+2020-07-13 10:43:10.218 INFO [restartedMain]org.apache.catalina.core.AprLifecycleListener.log:173 -The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/liuyanming/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2020-07-13 10:43:10.391 INFO [restartedMain]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-07-13 10:43:10.393 INFO [restartedMain]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:296 -Root WebApplicationContext: initialization completed in 3091 ms
+2020-07-13 10:43:11.161 INFO [restartedMain]org.elasticsearch.plugins.PluginsService.logPluginInfo:190 -no modules loaded
+2020-07-13 10:43:11.164 INFO [restartedMain]org.elasticsearch.plugins.PluginsService.logPluginInfo:193 -loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-07-13 10:43:11.165 INFO [restartedMain]org.elasticsearch.plugins.PluginsService.logPluginInfo:193 -loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-07-13 10:43:11.165 INFO [restartedMain]org.elasticsearch.plugins.PluginsService.logPluginInfo:193 -loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-07-13 10:43:11.166 INFO [restartedMain]org.elasticsearch.plugins.PluginsService.logPluginInfo:193 -loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-07-13 10:43:11.166 INFO [restartedMain]org.elasticsearch.plugins.PluginsService.logPluginInfo:193 -loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020-07-13 10:43:12.610 INFO [restartedMain]o.s.data.elasticsearch.client.TransportClientFactoryBean.lambda$buildClient$0:88 -Adding transport node : 127.0.0.1:9300
+2020-07-13 10:43:13.638 INFO [restartedMain]o.s.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer:57 -LiveReload server is running on port 35729
+2020-07-13 10:43:14.582 INFO [restartedMain]o.s.boot.actuate.endpoint.web.EndpointLinksResolver.<init>:59 -Exposing 15 endpoint(s) beneath base path '/actuator'
+2020-07-13 10:43:14.682 INFO [restartedMain]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-13 10:43:14.864 INFO [restartedMain]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-13 10:43:15.025 INFO [restartedMain]o.s.b.a.web.servlet.WelcomePageHandlerMapping.<init>:56 -Adding welcome page: class path resource [static/index.html]
+2020-07-13 10:43:15.405 INFO [restartedMain]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.initialize:171 -Initializing ExecutorService 'taskScheduler'
+2020-07-13 10:43:15.525 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:147 -Context refreshed
+2020-07-13 10:43:15.552 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:150 -Found 1 custom documentation plugin(s)
+2020-07-13 10:43:15.604 INFO [restartedMain]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2020-07-13 10:43:15.759 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: myexcUsingPOST_1
+2020-07-13 10:43:15.761 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: myexcUsingPOST_2
+2020-07-13 10:43:15.763 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: myexcUsingPOST_3
+2020-07-13 10:43:15.764 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: myexcUsingPOST_4
+2020-07-13 10:43:15.766 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: myexcUsingPOST_5
+2020-07-13 10:43:15.767 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: myexcUsingPOST_6
+2020-07-13 10:43:15.768 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: myexcUsingPOST_7
+2020-07-13 10:43:15.776 WARN [restartedMain]s.d.spring.web.readers.parameter.ParameterDataTypeReader.apply:86 -Trying to infer dataType org.springframework.ui.ModelMap
+2020-07-13 10:43:15.808 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: orderUsingGET_1
+2020-07-13 10:43:15.813 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: loginUsingPOST_1
+2020-07-13 10:43:15.822 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: hemoUsingPOST_1
+2020-07-13 10:43:15.824 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: hemoUsingPOST_2
+2020-07-13 10:43:15.825 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: hemoUsingPOST_3
+2020-07-13 10:43:15.826 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: hemoUsingPOST_4
+2020-07-13 10:43:15.827 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: hemoUsingPOST_5
+2020-07-13 10:43:15.828 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: hemoUsingPOST_6
+2020-07-13 10:43:15.829 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: hemoUsingPOST_7
+2020-07-13 10:43:15.834 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: testMapUsingPOST_1
+2020-07-13 10:43:15.835 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: testMapUsingPOST_2
+2020-07-13 10:43:15.836 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: testMapUsingPOST_3
+2020-07-13 10:43:15.838 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: testMapUsingPOST_4
+2020-07-13 10:43:15.839 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: testMapUsingPOST_5
+2020-07-13 10:43:15.840 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: testMapUsingPOST_6
+2020-07-13 10:43:15.841 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: testMapUsingPOST_7
+2020-07-13 10:43:15.842 WARN [restartedMain]s.d.spring.web.readers.parameter.ParameterDataTypeReader.apply:86 -Trying to infer dataType org.springframework.ui.ModelMap
+2020-07-13 10:43:15.844 INFO [restartedMain]s.d.s.w.readers.operation.CachingOperationNameGenerator.startingWith:40 -Generating unique operation named: indexUsingGET_1
+2020-07-13 10:43:16.082 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8089"]
+2020-07-13 10:43:16.092 INFO [restartedMain]org.apache.tomcat.util.net.NioSelectorPool.log:173 -Using a shared selector for servlet write/read
+2020-07-13 10:43:16.114 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:204 -Tomcat started on port(s): 8089 (http) with context path ''
+2020-07-13 10:43:16.118 INFO [restartedMain]c.xingheng.ai.BigDataAnalysis.BigDataAnalysisApplication.logStarted:59 -Started BigDataAnalysisApplication in 9.977 seconds (JVM running for 11.594)
+2020-07-13 10:44:36.280 INFO [http-nio-8089-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-13 10:44:36.281 INFO [http-nio-8089-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2020-07-13 10:44:36.297 INFO [http-nio-8089-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 16 ms
+2020-07-13 10:46:14.953 INFO [Thread-13]o.s.scheduling.concurrent.ThreadPoolTaskScheduler.shutdown:208 -Shutting down ExecutorService 'taskScheduler'
+2020-07-13 10:46:14.955 INFO [Thread-13]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:208 -Shutting down ExecutorService 'applicationTaskExecutor'

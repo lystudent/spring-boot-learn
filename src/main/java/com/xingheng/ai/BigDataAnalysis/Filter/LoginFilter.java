@@ -18,7 +18,7 @@ import java.io.IOException;
 public class LoginFilter implements Filter {
 
 	/**
-	 * filter初始化 在启动容器的时候 new一个实例，掉这个方法
+	 * filter初始化 在启动容器的时候 new一个实例，调用这个方法
 	 * 容器加载的时候用
 	 * @param filterConfig
 	 * @throws ServletException
